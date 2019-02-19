@@ -14,8 +14,8 @@ export default new phtml.Plugin('phtml-h-element', opts => {
 		: false
 	: 1;
 
-	return root => {
-		root.walk(node => {
+	return {
+		Element(node) {
 			if (node.type === 'element' && node.name === name) {
 				if (!headingLevel && !ariaLevel) {
 					return;
@@ -32,7 +32,7 @@ export default new phtml.Plugin('phtml-h-element', opts => {
 					node.attrs.add('aria-level', String(currentLevel + ariaLevel - 1));
 				}
 			}
-		});
+		}
 	};
 });
 
