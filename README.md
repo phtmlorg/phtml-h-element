@@ -44,6 +44,14 @@
 
 ## Usage
 
+Transform HTML files directly from the command line:
+
+```bash
+npx phtml source.html output.html -p @phtml/h-element
+```
+
+### Node
+
 Add [pHTML H Element] to your project:
 
 ```bash
