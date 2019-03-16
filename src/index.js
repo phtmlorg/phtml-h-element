@@ -15,7 +15,7 @@ export default new phtml.Plugin('phtml-h-element', opts => {
 	: 1;
 
 	return {
-		Element(node) {
+		Element (node) {
 			if (node.type === 'element' && node.name === name) {
 				if (!headingLevel && !ariaLevel) {
 					return;
